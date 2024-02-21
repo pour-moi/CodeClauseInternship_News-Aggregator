@@ -11,8 +11,9 @@ const StyledHeader = styled.div`
   align-items: center;
   justify-content: center;
   img {
-    min-width: 80em;
-    min-height: 40em;
+    width: 70em;
+    height: 36em;
+    margin-bottom: 9em;
   }
   .textArea {
     width: 40em;
@@ -21,29 +22,34 @@ const StyledHeader = styled.div`
     background-color: white;
     border: 1px solid black;
     position: absolute;
-    top: 930px;
+    top: 750px;
     right: 300px;
   }
   p {
     text-align: center;
+    font-family: "Tommy";
+    color: #808080;
   }
   .Title {
+    font-family: "Kanit";
     font-weight: bold;
+    color: black;
   }
 `;
 
 const StyledButton = styled.div`
   display: flex;
-  margin: 8em;
-  margin-bottom: 4em;
-  position: relative;
+  gap: 75em;
+  margin: 4em;
+  // margin-bottom: 4em;
+  position: absolute;
   button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid white;
     font-size: 1em;
-    background-color: white;
+    background-color: #dadada;
     margin: 0.1em;
   }
 `;
@@ -54,6 +60,7 @@ const UserChoice = styled.div`
   h1 {
     margin-right: 21em;
     font-family: "RockStar";
+    color: #330c6f;
   }
 `;
 
@@ -102,8 +109,12 @@ export function HeaderNews() {
           </LatTren> */}
         </UserChoice>
         <img
+          onClick={() =>
+            (window.location.href = newsData?.articles[currentNewsIndex]?.url)
+          }
           src={newsData?.articles[currentNewsIndex]?.urlToImage || ""}
           alt=""
+          style={{ cursor: "pointer" }}
         />{" "}
         <div className="textArea">
           <p className="Title">{newsData?.articles[currentNewsIndex]?.title}</p>
@@ -112,12 +123,16 @@ export function HeaderNews() {
           </p>
         </div>
         <StyledButton>
-          <button onClick={goToPreviousNews}>
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          <button onClick={goToNextNews}>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
+          <div>
+            <button onClick={goToPreviousNews}>
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+          </div>
+          <div>
+            <button onClick={goToNextNews}>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </div>
         </StyledButton>
       </StyledHeader>
     </>
