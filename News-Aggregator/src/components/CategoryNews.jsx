@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { ApiKey } from "./api.js";
 
 const StyledNews = styled.div`
   img {
@@ -28,7 +29,7 @@ const Styled = styled.div`
   gap: 2em;
 `;
 
-const apikey = "f9bce01001494f7dad469d0aeafbca16";
+// const apikey = "f9bce01001494f7dad469d0aeafbca16";
 
 export function NewsCategory({ category }) {
   const [newsData, setNewsData] = useState(null);
@@ -44,7 +45,7 @@ export function NewsCategory({ category }) {
   };
 
   const source = categoryToSource[category];
-  const NewsAPI = `https://newsapi.org/v2/everything?sources=${source}&apiKey=${apikey}`;
+  const NewsAPI = `https://newsapi.org/v2/everything?sources=${source}&apiKey=${ApiKey()}`;
 
   useEffect(() => {
     async function fetchNews() {

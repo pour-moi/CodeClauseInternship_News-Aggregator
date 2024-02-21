@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { ApiKey } from "./api.js";
 
 const StyledHeader = styled.div`
   display: flex;
@@ -61,8 +62,7 @@ const UserChoice = styled.div`
 //   gap: 1em;
 // `;
 
-const apikey = "f9bce01001494f7dad469d0aeafbca16";
-const NewsAPI = `https://newsapi.org/v2/everything?sources=fox-news&apiKey=${apikey}`;
+const NewsAPI = `https://newsapi.org/v2/everything?sources=fox-news&apiKey=${ApiKey()}`;
 export function HeaderNews() {
   const [newsData, setNewsData] = useState(null);
   const [setError] = useState(null);
