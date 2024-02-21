@@ -27,6 +27,15 @@ const Styled = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
+  h4 {
+    font-family: "Kanit";
+    margin: 0;
+  }
+  p {
+    font-family: "Tommy";
+    color: #808080;
+    // font-size: 0.9em;
+  }
 `;
 
 // const apikey = "f9bce01001494f7dad469d0aeafbca16";
@@ -35,7 +44,6 @@ export function NewsCategory({ category }) {
   const [newsData, setNewsData] = useState(null);
   const [error, setError] = useState(null);
 
-  // Map categories to sources
   const categoryToSource = {
     Sport: "espn",
     Technology: "techcrunch",
