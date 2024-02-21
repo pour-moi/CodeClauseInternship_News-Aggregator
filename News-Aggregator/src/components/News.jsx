@@ -92,11 +92,13 @@ export function News() {
 
   const handleNext = () => {
     setCurrentPage(currentPage + 1);
+    window.scrollTo(0, 700);
   };
 
   const handlePrev = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo(0, 0);
     }
   };
 
