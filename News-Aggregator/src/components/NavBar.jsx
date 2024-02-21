@@ -13,9 +13,15 @@ const StyledNavBar = styled.nav`
   h1 {
     margin: 0;
     font-family: "Akira";
+    color: #330c6f;
   }
   li {
     cursor: pointer;
+    font-family: "Tommy";
+  }
+  a {
+    color: black;
+    text-decoration: none;
   }
 `;
 
@@ -32,7 +38,7 @@ export function NavBar() {
         <li>
           <Link to="/Technology">Technology</Link>
         </li>
-        <h1>ET Zena</h1>
+        <h1>Globe Info</h1>
         <li>
           <Link to="/Business">Business</Link>
         </li>
