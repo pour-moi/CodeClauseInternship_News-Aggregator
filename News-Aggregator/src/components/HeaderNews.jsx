@@ -41,7 +41,6 @@ const StyledButton = styled.div`
   display: flex;
   gap: 75em;
   margin: 4em;
-  // margin-bottom: 4em;
   position: absolute;
   button {
     width: 40px;
@@ -55,8 +54,6 @@ const StyledButton = styled.div`
 `;
 
 const UserChoice = styled.div`
-  // display: flex;
-  // gap: 5em;
   h1 {
     margin-right: 21em;
     font-family: "RockStar";

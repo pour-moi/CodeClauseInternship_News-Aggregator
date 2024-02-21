@@ -29,7 +29,6 @@ const Infos = styled.div`
   p {
     font-family: "Tommy";
     color: #808080;
-    // font-size: 0.9em;
   }
 `;
 

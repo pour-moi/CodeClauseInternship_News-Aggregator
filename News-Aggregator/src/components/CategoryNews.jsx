@@ -34,11 +34,15 @@ const Styled = styled.div`
   p {
     font-family: "Tommy";
     color: #808080;
-    // font-size: 0.9em;
   }
 `;
 
-// const apikey = "f9bce01001494f7dad469d0aeafbca16";
+const Head = styled.div`
+  h1 {
+    font-family: "RockStar";
+    color: #330c6f;
+  }
+`;
 
 export function NewsCategory({ category }) {
   const [newsData, setNewsData] = useState(null);
@@ -74,7 +78,9 @@ export function NewsCategory({ category }) {
 
   return (
     <>
-      <h1 style={{ fontFamily: "RockStar" }}>{category}</h1>
+      <Head>
+        <h1>{category}</h1>
+      </Head>
       <Styled>
         {newsData?.articles.map((article, index) => (
           <StyledNews key={index}>
