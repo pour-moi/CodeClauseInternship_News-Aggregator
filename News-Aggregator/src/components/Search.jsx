@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const StyledSearchBar = styled.div`
   height: 4em;
@@ -10,11 +14,14 @@ const StyledSearchBar = styled.div`
 
 const Search = styled.div`
   margin-left: 6em;
+  color: white;
+  font-size: 2em;
 `;
 
 const StyledIcons = styled.div`
   display: flex;
-  gap: 2em;
+  font-size: 2em;
+  gap: 1em;
   margin-right: 4em;
 `;
 
@@ -23,13 +30,12 @@ export function SearchBar() {
     <>
       <StyledSearchBar>
         <Search>
-          <input placeholder="Search"></input>
-          <button>search</button>
+          <FontAwesomeIcon icon={faNewspaper} />
         </Search>
         <StyledIcons>
-          <p style={{ color: "white" }}>icon 1</p>
-          <p style={{ color: "white" }}>icon 2</p>
-          <p style={{ color: "white" }}>icon 3</p>
+          <FontAwesomeIcon style={{ color: "white" }} icon={faInstagram} />
+          <FontAwesomeIcon style={{ color: "white" }} icon={faTwitter} />
+          <FontAwesomeIcon style={{ color: "white" }} icon={faFacebook} />
         </StyledIcons>
       </StyledSearchBar>
     </>
