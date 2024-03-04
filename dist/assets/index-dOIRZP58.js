@@ -994,19 +994,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
   @font-face {
     font-family: 'RockStar';
-    src: url('../fonts/RockStar-ExtraLight.ttf') format('truetype');
+    src: url('/fonts/RockStar-ExtraLight.ttf') format('truetype');
   }
   @font-face {
     font-family: 'Kanit';
-    src: url('../fonts/Kanit-SemiBold.ttf') format('truetype');
+    src: url('/fonts/Kanit-SemiBold.ttf') format('truetype');
   }
   @font-face {
     font-family: 'Tommy';
-    src: url('../fonts/CreatoDisplay-Regular.otf') format('opentype');
+    src: url('/fonts/CreatoDisplay-Regular.otf') format('opentype');
   }
   @font-face {
     font-family: 'Akira';
-    src: url('../fonts/Akira Expanded Demo.otf') format('opentype');
+    src: url('/fonts/Akira Expanded Demo.otf') format('opentype');
   }
 `,ok=Ne.div`
   display: flex;
